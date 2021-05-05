@@ -280,10 +280,12 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                     msgg = f"Conn: {file.connections} <b>|</b> GID: <code>{gid}</code>"
                 else:
                     msgg = f"P: {file.connections} | S: {file.num_seeders} <b>|</b> GID: <code>{gid}</code>"
-                msg = f"\n<b>➭ File Name :</b> 〘 `{downloading_dir_name}`〙"
-                msg += f"\n<b>➭ Speed</b>: 〘 {file.download_speed_string()} 〙"
-                msg += f"\n<b>➭ Status</b>: 〘 {file.progress_string()} <b>of</b> {file.total_length_string()} <b>〙|〘</b> {file.eta_string()} <b>|</b> {msgg} 〙"
-                msg += f"\n<b>➭ Total Size</b>: 〘 {file.total_length_string()} 〙 "
+                msg = f"\n<b>╭────────「➭💻 File Name :</b> 〘 `{downloading_dir_name}`〙"
+                msg += f"\n<b>├➭🔥 Speed</b>: 〘 {file.download_speed_string()} 〙"
+                msg += f"\n<b>├➭⌛ Status</b>: 〘 {file.progress_string()} <b>of</b> {file.total_length_string()} <b>"
+                msg += f"\n<b>├➭💾 Total Size</b>: 〘 {file.total_length_string()} 〙 "
+                msg += f"\n<b>├➭⌚ ETA〘</b> {file.eta_string()} <b>|</b> {msgg} 〙
+                msg += f"\n<b>╰──「</b>☕️ @MIRRORDEV ☕️ 」 "
 
                 # if is_file is None :
                 # msg += f"\n<b>Conn:</b> {file.connections}, GID: <code>{gid}</code>"
