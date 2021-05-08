@@ -76,7 +76,7 @@ class Progress:
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-            progress = "[{0}{1}] \nP: {2}%\n".format(
+            progress = "<b>╭────── ⌊__UploadinG: 〘{2}%〙 📤__⌉</b>\n│ \n<b>├〖{0}{1}〗</b>\n".format(
                 "".join(
                     [FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]
                 ),
@@ -89,7 +89,7 @@ class Progress:
                 round(percentage, 2),
             )
 
-            tmp = progress + "{0} of {1}\n➭Speed: {2}/s\n➭ETA: {3}\n".format(
+            tmp = progress +"│" + "\n ├{0} of {1}\n ├➭Speed: {2}/s\n ├➭ETA: {3}\n **│**\n**╰── ⌊ @mirrordev ⌉**".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
