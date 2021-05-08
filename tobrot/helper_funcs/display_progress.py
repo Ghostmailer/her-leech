@@ -89,7 +89,7 @@ class Progress:
                 round(percentage, 2),
             )
 
-            tmp = progress +"│" + "\n ├{0} of {1}\n ├➭Speed: {2}/s\n ├➭ETA: {3}\n **│**\n**╰── ⌊ @mirrordev ⌉**".format(
+            tmp = progress progress +"│" + "\n**├Total 📀:**   〘<code>{1}</code>〙\n**├Done ✓ :** 〘<code>{0}</code>〙\n**├Speed** 🚀 :  〘<code>{2}/s</code>〙\n**├ETA** ⏳ :  〘<code>{3}</code>〙\n**│**\n**╰── ⌊ @mirrordev ⌉**".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
